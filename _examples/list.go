@@ -20,7 +20,7 @@ func main() {
 	defer ui.Close()
 
 	l := widgets.NewList()
-	l.Title = "List"
+	l.Title = "List [Red](fg:red)"
 	l.Rows = []string{
 		"[0] github.com/fedomn/termui/v3",
 		"[1] [你好，世界](fg:blue)",
@@ -33,6 +33,7 @@ func main() {
 		"[8] bar",
 		"[9] baz",
 	}
+	l.TitleStyle = ui.NewStyle(ui.ColorYellow)
 	l.TextStyle = ui.NewStyle(ui.ColorYellow)
 	l.WrapText = false
 	l.SetRect(0, 0, 25, 8)
